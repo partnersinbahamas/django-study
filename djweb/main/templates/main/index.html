@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django</title>
-</head>
-<body>
-    <header>
-      <h1>Main page of application.</h1>
-    </header>
+<!-- extends allows us to extend some Jinja teplates -->
+{% extends 'main/layout.html' %}
 
-    <main>
-        <h3>Availiable pages: </h3>
+{% block title %}
+    Django
+{% endblock %}
 
-        <ul>
-            <li>
-              <a href="/about">About us</a>
-            </li>
-            <li>
-              <a href="/admin">Administration</a>
-            </li>
-        </ul>
-    </main>
-</body>
-</html>
+{% block header %}
+    <h1>Main page of application.</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>Availiable pages: </h3>
+    {% include 'main/routes.html' %}
+{% endblock %}  

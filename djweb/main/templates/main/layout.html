@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jinja teplate allows us to create block/section with key word block/section -->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}  
+    </main>
+</body>
+</html>
