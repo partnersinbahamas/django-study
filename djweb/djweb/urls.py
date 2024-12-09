@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 # urls paths for app
 # include meand that we control paths for main app from main.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
-]
+    path('', include('main.urls'), name='home')
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
