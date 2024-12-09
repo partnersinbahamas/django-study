@@ -5,11 +5,7 @@
     Django
 {% endblock %}
 
-{% block header %}
+{% block main %}
     <h1>Main page of application.</h1>
+    <button class="btn btn-danger">Home</button>
 {% endblock %}
-
-{% block content %}
-    <h3>Availiable pages: </h3>
-    {% include 'main/routes.html' %}
-{% endblock %}  
