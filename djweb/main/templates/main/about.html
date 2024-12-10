@@ -13,8 +13,13 @@
 <h1>About us</h1>
 
 <p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis amet debitis expedita? Aspernatur, aut consequatur odit earum hic illum harum quae cupiditate nulla reiciendis explicabo quos quo recusandae asperiores necessitatibus? Optio obcaecati beatae doloribus dolore, rerum nihil incidunt mollitia error officia consequatur distinctio hic, sunt repudiandae? Quidem eligendi accusamus consequatur error, numquam reprehenderit natus hic eos voluptas dicta! Aliquid officia nihil dicta autem. Veritatis autem, qui vero deleniti nemo, rerum quam possimus perspiciatis repudiandae nihil nobis temporibus aliquid voluptatum nam laborum, impedit voluptas enim. Doloremque minima reprehenderit assumenda nesciunt excepturi omnis, perspiciatis exercitationem cupiditate quo aperiam ex impedit maiores cum.
+    {{ text }}
     <br>
-    <button class="btn btn-warning">Click</button>
+    {% for btn in buttons %}
+        <div class="buttons">
+            <!-- | works as a Jinja filter or map() function -->
+            <button class="btn {{ buttonClass }}">{{ btn|upper }}</button>
+        </div>
+    {% endfor %}
 </p>
 {% endblock %}

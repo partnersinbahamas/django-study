@@ -7,5 +7,16 @@
 
 {% block main %}
     <h1>Main page of application.</h1>
-    <button class="btn btn-danger">Home</button>
+    <div class="buttons">
+        {% for btn in buttons %}
+            {% if btn != 'Button-2' %}
+                <button class="btn {{ buttonClass }}">
+                    <!-- filter working as a map() function -->
+                    {% filter upper %}
+                        {{ btn }}
+                    {% endfilter %}
+                </button>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}
