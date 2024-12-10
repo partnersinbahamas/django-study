@@ -52,7 +52,7 @@ ul {
     list-style: none;
 }
 
-main {
+.main_content-center {
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -10,16 +10,18 @@
 {% endblock %}
 
 {% block main %}
-<h1>About us</h1>
+<div class="main_content-center">
+    <h1>About us</h1>
 
-<p>
-    {{ text }}
-    <br>
-    {% for btn in buttons %}
-        <div class="buttons">
-            <!-- | works as a Jinja filter or map() function -->
-            <button class="btn {{ buttonClass }}">{{ btn|upper }}</button>
-        </div>
-    {% endfor %}
-</p>
+    <p>
+        {{ text }}
+        <br>
+        {% for btn in buttons %}
+            <div class="buttons">
+                <!-- | works as a Jinja filter or map() function -->
+                <button class="btn {{ buttonClass }}">{{ btn|upper }}</button>
+            </div>
+        {% endfor %}
+    </p>
+</div>
 {% endblock %}
