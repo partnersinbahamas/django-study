@@ -22,5 +22,6 @@ from django.conf import settings
 # include meand that we control paths for main app from main.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'), name='home')
+    path('', include('main.urls'), name='home'),
+    path('news/', include('news.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
