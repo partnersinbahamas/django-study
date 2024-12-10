@@ -14,3 +14,8 @@ class Article(models.Model):
 
     def __self__(self):
         return self.title
+    
+    class Meta:
+        # to see rigth names in admin
+        verbose_name = "Article"
+        verbose_name_plural = "Articles"
