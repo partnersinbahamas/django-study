@@ -12,7 +12,12 @@ class Article(models.Model):
     text = models.TextField('State')
     date = models.DateTimeField('Date')
 
-    def __self__(self):
+    """
+    __self__
+    used to provide a string representation of a model object
+    and when displaying model objects in the Django admin panel
+    """
+    def __str__(self):
         return self.title
     
     class Meta:
