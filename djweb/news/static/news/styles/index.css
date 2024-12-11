@@ -1,0 +1,16 @@
+.news_title {
+  text-align: center;
+}
+
+.news_list {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.news_item {
+  width: 100%;
+}

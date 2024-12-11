@@ -1,6 +1,24 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'news/styles/card.css' %}">
+<link rel="stylesheet" href="{% static 'news/styles/index.css' %}">
+{% endblock %}
+
 {% block main %}
-  News
+  <div class="news_wrapper">
+    <h1 class="news_title">
+        News
+      </h1>
+    
+    
+      <ul class="news_list">
+        {% for n in news %}
+            <li class="news_item">
+                {% include 'news/card.html' %}
+            </li>
+        {% endfor %}
+      </ul>
+  </div>
 {% endblock %}
