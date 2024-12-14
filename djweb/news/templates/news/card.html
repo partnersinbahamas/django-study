@@ -12,4 +12,8 @@
     <p class="news_card-state">{{ n.text }}</p>
 
     <div class="news_card-date">{{ n.date }}</div>
+    <br>
+    <a href="{% url 'news-details' n.id %}">
+        <button class="btn btn-info">Read more</button>
+    </a>
 </div>

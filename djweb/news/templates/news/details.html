@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'news/styles/card.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="details">
+    <h1 class="details_title">
+      {{article.title}}
+    </h1>
+
+    <h3 class="details_desctiption">
+      {{article.desctiption}}
+    </h3>
+
+    <p class="details_text">{{article.text}}</p>
+
+    <div class="details_date">{{article.date}}</div>
+</div>
+{% endblock %}

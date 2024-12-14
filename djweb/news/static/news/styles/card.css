@@ -4,3 +4,27 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.details {
+    box-sizing: border-box;
+    margin: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #3b3264;
+    height: 93vh;
+}
+
+.details_title {}
+
+.details_desctiption {
+    margin-top: 20px;
+}
+
+.details_text {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.details_date {
+    margin-top: 200px;
+}
