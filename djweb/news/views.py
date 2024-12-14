@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Article
+from .form import ArticleForm
 
 def news_main(request):
     """
@@ -13,4 +14,21 @@ def news_main(request):
     return render(request, 'news/index.html', data)
 
 def add_form(request):
-    return render(request, 'news/add.html')
+    error = ''
+
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('news-home')
+        else:
+            error = '! Form is invalid !'
+
+    form = ArticleForm
+
+    data = {
+        'form': form,
+        'error': error,
+    }
+    return render(request, 'news/add.html', data)

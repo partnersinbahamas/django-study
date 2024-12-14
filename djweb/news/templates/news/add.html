@@ -8,30 +8,17 @@
 {% block main %}
     <div class="news_add">
         <h1>Add new state</h1>
+
         <form method="post" class="form">
             <!-- csrf_token it is a security mechanism used to protect web applications. -->
             {% csrf_token %}
             
-            <input
-              type="text"
-              placeholder="Name"
-              class="form_item form-control"
-            >
-    
-            <input
-              type="text"
-              placeholder="Desctiption"
-              class="form_item form-control"
-            >
-            
-            <textarea
-              placeholder="State"
-              class="form_item form-control"
-            ></textarea>
-    
-            <input type="date"  class="form_item form-control">
-            <input type="time" class="form_item form-control">
-    
+            {{form.title}}
+            {{form.desctiption}}
+            {{form.text}}
+            {{form.date}}
+
+            <span class="form_error">{{ error }}</span>
             <button type="submit" class="btn btn-info">Post</button>
         </form>
     </div>
