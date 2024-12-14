@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'news/styles/add.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="news_add">
+        <h2>Are you sure to delete "{{article.title}}"?</h2>
+
+        <form method="post" class="form">
+            <!-- csrf_token it is a security mechanism used to protect web applications. -->
+            {% csrf_token %}
+        
+            <button type="submit" class="btn btn-danger">
+                Delete
+            </button>
+        </form>
+    </div>
+{% endblock %}

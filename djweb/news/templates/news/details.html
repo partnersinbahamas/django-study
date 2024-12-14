@@ -18,5 +18,12 @@
     <p class="details_text">{{article.text}}</p>
 
     <div class="details_date">{{article.date}}</div>
+
+    <a href="{% url 'news-delete' article.id %}">
+        <button class="delete-button btn btn-danger">Delete</button>
+    </a>
+    <a href="{% url 'news-update' article.id %}">
+        <button class="update-button btn btn-warning">Update</button>
+    </a>
 </div>
 {% endblock %}
