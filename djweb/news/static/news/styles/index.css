@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.news_head {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .news_list {
   padding: 20px;
   display: flex;
@@ -13,4 +20,10 @@
 
 .news_item {
   width: 100%;
+}
+
+.add_button {
+  color: #fff !important;
+  position: absolute;
+  right: 20px;
 }

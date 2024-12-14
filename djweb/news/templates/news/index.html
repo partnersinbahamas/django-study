@@ -8,17 +8,21 @@
 
 {% block main %}
   <div class="news_wrapper">
-    <h1 class="news_title">
+    <div class="news_head">
+      <h1 class="news_title">
         News
       </h1>
+      <a href="{% url 'news-add' %}">
+        <button class="add_button btn btn-info">Add new state</button>
+      </a>
+    </div>
     
-    
-      <ul class="news_list">
-        {% for n in news %}
-            <li class="news_item">
-                {% include 'news/card.html' %}
-            </li>
-        {% endfor %}
-      </ul>
+    <ul class="news_list">
+      {% for n in news %}
+        <li class="news_item">
+          {% include 'news/card.html' %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 {% endblock %}

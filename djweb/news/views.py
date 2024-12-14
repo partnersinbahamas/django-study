@@ -11,3 +11,6 @@ def news_main(request):
 
     }
     return render(request, 'news/index.html', data)
+
+def add_form(request):
+    return render(request, 'news/add.html')
