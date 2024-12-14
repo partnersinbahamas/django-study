@@ -3,6 +3,32 @@ body {
     color: #fff
 }
 
+.app {
+    display: flex;
+}
+
+.bar {
+    float: left;
+    background-color: #19152c;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        > span {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -26,30 +52,12 @@ img {
     height: 150px;
 }
 
-aside {
-    float: left;
-    background-color: #19152c;
-    width: 20%;
-    padding: 2.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
-
-    >div {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        > span {
-            padding: 0;
-            margin: 0;
-            font-size: 20px;
-        }
-    }
-}
-
 ul {
     list-style: none;
+}
+
+main {
+    width: 100%;
 }
 
 .main_content-center {
