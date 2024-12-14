@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Article
 from .form import ArticleForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 
 def news_main(request):
     """
@@ -38,3 +38,10 @@ class NewsDetailView(DetailView):
     model = Article
     template_name = 'news/details.html'
     context_object_name = 'article' # this is object name we use in template file as a variable
+
+class NewsUpdateView(UpdateView):
+    model = Article
+    template_name = 'news/add.html'
+
+    # to have the same view as ArticleForm
+    form_class = ArticleForm

@@ -7,7 +7,7 @@
 
 {% block main %}
     <div class="news_add">
-        <h1>Add new state</h1>
+        <h1>{% if article %} Update {% else %} Add new {% endif %} state</h1>
 
         <form method="post" class="form">
             <!-- csrf_token it is a security mechanism used to protect web applications. -->
@@ -19,7 +19,13 @@
             {{form.date}}
 
             <span class="form_error">{{ error }}</span>
-            <button type="submit" class="btn btn-info">Post</button>
+            <button type="submit" class="btn btn-info">
+                {% if article %}
+                    Update
+                {% else %}
+                    Post
+                {% endif %}
+            </button>
         </form>
     </div>
 {% endblock %}

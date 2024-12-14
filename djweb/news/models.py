@@ -20,6 +20,10 @@ class Article(models.Model):
     def __str__(self):
         return self.title
     
+    # get_absolute_url needs to redirect user after Article update
+    def get_absolute_url(self):
+        return f'/news/{self.id}'
+    
     class Meta:
         # to see rigth names in admin
         verbose_name = "Article"
